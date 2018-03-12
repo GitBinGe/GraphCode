@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GraphCode</string>
+    <string name="title">NEW PROJECT</string>
+    <string name="title_projects">PROJECTS</string>
+    <string name="title_devices">DEVICES</string>
+    <string name="title_debug">DEBIG</string>
+    <string name="title_setting">SETTING</string>
+    <string name="menu_projects">Projects</string>
+    <string name="menu_devices">Devices</string>
+    <string name="title_controller">CONTROLLER</string>
+
+    <item name="tag_script" type="id"></item>
+
+    <string-array name="dir">
+        <item>stop</item>
+        <item>forward</item>
+        <item>backward</item>
+    </string-array>
+    <string-array name="led_switch">
+        <item>NO</item>
+        <item>OFF</item>
+    </string-array>
+
+    <string name="comfirm_exit">Confirm to quit?</string>
+    <string name="comfirm_delete">Confirm to delete?</string>
+    <string name="comfirm_overrite">File already exists! confirm to recover?</string>
+
+</resources>

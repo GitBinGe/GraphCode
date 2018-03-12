@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<program>
+  <header>
+    <applicationBuildName></applicationBuildName>
+    <applicationBuildNumber>0</applicationBuildNumber>
+    <applicationName>Pocket Code</applicationName>
+    <applicationVersion>1.0</applicationVersion>
+    <catrobatLanguageVersion>0.95</catrobatLanguageVersion>
+    <dateTimeUpload></dateTimeUpload>
+    <description></description>
+    <deviceName>SCL-AL00</deviceName>
+    <mediaLicense></mediaLicense>
+    <platform>Android</platform>
+    <platformVersion>22.0</platformVersion>
+    <programLicense></programLicense>
+    <programName>car4</programName>
+    <remixOf></remixOf>
+    <screenHeight>1184</screenHeight>
+    <screenMode>STRETCH</screenMode>
+    <screenWidth>720</screenWidth>
+    <tags></tags>
+    <url></url>
+    <userHandle></userHandle>
+  </header>
+  <objectList>
+    <object name="MainScript">
+      <scriptList>
+        <script type="StartScript">
+          <brickList>
+            <brick type="ForeverBrick"/>
+            <brick type="IfLogicBeginBrick">
+              <formulaList>
+                <formula category="IF_CONDITION">
+                  <leftChild>
+                    <leftChild>
+                      <type>STRING</type>
+                      <value>1</value>
+                    </leftChild>
+                    <type>FUNCTION</type>
+                    <value>ULTRASONIC_DIST</value>
+                  </leftChild>
+                  <rightChild>
+                    <type>NUMBER</type>
+                    <value>20</value>
+                  </rightChild>
+                  <type>OPERATOR</type>
+                  <value>SMALLER_THAN</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="BroadcastWaitBrick">
+              <broadcastMessage>turn</broadcastMessage>
+            </brick>
+            <brick type="IfLogicElseBrick"/>
+            <brick type="IfLogicBeginBrick">
+              <formulaList>
+                <formula category="IF_CONDITION">
+                  <leftChild>
+                    <leftChild>
+                      <type>STRING</type>
+                      <value>5</value>
+                    </leftChild>
+                    <type>FUNCTION</type>
+                    <value>INFRAREDTUDE_DI</value>
+                  </leftChild>
+                  <rightChild>
+                    <type>USER_VARIABLE</type>
+                    <value>lastvalue</value>
+                  </rightChild>
+                  <type>OPERATOR</type>
+                  <value>NOT_EQUAL</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="SetVariableBrick">
+              <formulaList>
+                <formula category="VARIABLE">
+                  <leftChild>
+                    <type>STRING</type>
+                    <value>5</value>
+                  </leftChild>
+                  <type>FUNCTION</type>
+                  <value>INFRAREDTUDE_DI</value>
+                </formula>
+              </formulaList>
+              <inUserBrick>false</inUserBrick>
+              <userVariable>lastvalue</userVariable>
+            </brick>
+            <brick type="IfLogicBeginBrick">
+              <formulaList>
+                <formula category="IF_CONDITION">
+                  <leftChild>
+                    <type>USER_VARIABLE</type>
+                    <value>lastvalue</value>
+                  </leftChild>
+                  <rightChild>
+                    <type>NUMBER</type>
+                    <value>1</value>
+                  </rightChild>
+                  <type>OPERATOR</type>
+                  <value>EQUAL</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>3</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>1</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>4</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>1</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickRGBLedBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>7</value>
+                </formula>
+                <formula category="IBRICK_LED_RED">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_LED_GREEN">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_LED_BLUE">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IfLogicElseBrick"/>
+            <brick type="IfLogicBeginBrick">
+              <formulaList>
+                <formula category="IF_CONDITION">
+                  <leftChild>
+                    <type>USER_VARIABLE</type>
+                    <value>lastvalue</value>
+                  </leftChild>
+                  <rightChild>
+                    <type>NUMBER</type>
+                    <value>2</value>
+                  </rightChild>
+                  <type>OPERATOR</type>
+                  <value>EQUAL</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>4</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>1</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>3</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>1</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>150</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickRGBLedBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>7</value>
+                </formula>
+                <formula category="IBRICK_LED_RED">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_LED_GREEN">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_LED_BLUE">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IfLogicElseBrick"/>
+            <brick type="IfLogicBeginBrick">
+              <formulaList>
+                <formula category="IF_CONDITION">
+                  <leftChild>
+                    <type>USER_VARIABLE</type>
+                    <value>lastvalue</value>
+                  </leftChild>
+                  <rightChild>
+                    <type>NUMBER</type>
+                    <value>3</value>
+                  </rightChild>
+                  <type>OPERATOR</type>
+                  <value>EQUAL</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>4</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>1</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>3</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>1</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>230</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickRGBLedBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>7</value>
+                </formula>
+                <formula category="IBRICK_LED_RED">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_LED_GREEN">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_LED_BLUE">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IfLogicElseBrick"/>
+            <brick type="IfLogicBeginBrick">
+              <formulaList>
+                <formula category="IF_CONDITION">
+                  <leftChild>
+                    <type>USER_VARIABLE</type>
+                    <value>lastvalue</value>
+                  </leftChild>
+                  <rightChild>
+                    <type>NUMBER</type>
+                    <value>4</value>
+                  </rightChild>
+                  <type>OPERATOR</type>
+                  <value>EQUAL</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>4</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>1</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>230</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>3</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>1</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickRGBLedBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>7</value>
+                </formula>
+                <formula category="IBRICK_LED_RED">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_LED_GREEN">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_LED_BLUE">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IfLogicElseBrick"/>
+            <brick type="IfLogicBeginBrick">
+              <formulaList>
+                <formula category="IF_CONDITION">
+                  <leftChild>
+                    <type>USER_VARIABLE</type>
+                    <value>lastvalue</value>
+                  </leftChild>
+                  <rightChild>
+                    <type>NUMBER</type>
+                    <value>5</value>
+                  </rightChild>
+                  <type>OPERATOR</type>
+                  <value>EQUAL</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>4</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>1</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>150</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>3</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>1</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickRGBLedBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>7</value>
+                </formula>
+                <formula category="IBRICK_LED_RED">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_LED_GREEN">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_LED_BLUE">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IfLogicElseBrick"/>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>4</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>1</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>3</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>1</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickRGBLedBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>7</value>
+                </formula>
+                <formula category="IBRICK_LED_RED">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_LED_GREEN">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+                <formula category="IBRICK_LED_BLUE">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IfLogicEndBrick"/>
+            <brick type="IfLogicEndBrick"/>
+            <brick type="IfLogicEndBrick"/>
+            <brick type="IfLogicEndBrick"/>
+            <brick type="IfLogicEndBrick"/>
+            <brick type="IfLogicElseBrick"/>
+            <brick type="IfLogicEndBrick"/>
+            <brick type="IfLogicEndBrick"/>
+            <brick type="LoopEndlessBrick"/>
+          </brickList>
+          <isUserScript>false</isUserScript>
+        </script>
+      </scriptList>
+    </object>
+    <object name="TurnScript">
+      <scriptList>
+        <script type="BroadcastScript">
+          <brickList>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>3</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>4</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickRGBLedBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>7</value>
+                </formula>
+                <formula category="IBRICK_LED_RED">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+                <formula category="IBRICK_LED_GREEN">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_LED_BLUE">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="WaitBrick">
+              <formulaList>
+                <formula category="TIME_TO_WAIT_IN_SECONDS">
+                  <type>NUMBER</type>
+                  <value>0.2</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="DoWhileBrick">
+              <formulaList>
+                <formula category="IF_CONDITION">
+                  <leftChild>
+                    <leftChild>
+                      <type>STRING</type>
+                      <value>1</value>
+                    </leftChild>
+                    <type>FUNCTION</type>
+                    <value>ULTRASONIC_DIST</value>
+                  </leftChild>
+                  <rightChild>
+                    <type>NUMBER</type>
+                    <value>20.5</value>
+                  </rightChild>
+                  <type>OPERATOR</type>
+                  <value>SMALLER_THAN</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>3</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>2</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>150</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="WaitBrick">
+              <formulaList>
+                <formula category="TIME_TO_WAIT_IN_SECONDS">
+                  <type>NUMBER</type>
+                  <value>0.1</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="DoWhileEndBrick"/>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>3</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="WaitBrick">
+              <formulaList>
+                <formula category="TIME_TO_WAIT_IN_SECONDS">
+                  <type>NUMBER</type>
+                  <value>0.1</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>3</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>1</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickMotorBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>4</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_DIR">
+                  <type>NUMBER</type>
+                  <value>1</value>
+                </formula>
+                <formula category="IBRICK_MOTOR_PWM">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+              </formulaList>
+            </brick>
+            <brick type="IBrickRGBLedBrick">
+              <formulaList>
+                <formula category="IBRICK_PORT">
+                  <type>STRING</type>
+                  <value>7</value>
+                </formula>
+                <formula category="IBRICK_LED_RED">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+                <formula category="IBRICK_LED_GREEN">
+                  <type>NUMBER</type>
+                  <value>255</value>
+                </formula>
+                <formula category="IBRICK_LED_BLUE">
+                  <type>NUMBER</type>
+                  <value>0</value>
+                </formula>
+              </formulaList>
+            </brick>
+          </brickList>
+          <receivedMessage>turn</receivedMessage>
+        </script>
+      </scriptList>
+    </object>
+  </objectList>
+  <data>
+    <globalListOfLists/>
+    <globalVariableList>
+      <userVariable>lastvalue</userVariable>
+    </globalVariableList>
+    <localListOfList>
+      <entry>
+        <string>MainScript</string>
+        <list/>
+      </entry>
+    </localListOfList>
+    <localVariableList>
+      <entry>
+        <string>MainScript</string>
+        <list/>
+      </entry>
+    </localVariableList>
+  </data>
+  <settings/>
+</program>

@@ -1,0 +1,4 @@
+{"data":[
+{"has_event": false, "file": "/dev/ttyUSB1", "input": "0.00", "path": "/devices/platform/ehci-platform/usb1/1-1/1-1.3/1-1.3:1.0/ttyUSB1/tty/ttyUSB1", "pwm": 0, "port": "3", "readlen": 0, "opened": true, "name": "Motor", "rport": "1.3", "online": true, "output": "", "last_output": "", "dir": 0},
+{"has_event": false, "file": "/dev/ttyUSB2", "input": "0.00", "path": "/devices/platform/ehci-platform/usb1/1-1/1-1.4/1-1.4:1.0/ttyUSB2/tty/ttyUSB2", "pwm": 0, "port": "4", "readlen": 0, "opened": true, "name": "Motor", "rport": "1.4", "online": true, "output": "", "last_output": "", "dir": 0}
+]}

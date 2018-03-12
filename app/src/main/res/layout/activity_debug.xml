@@ -1,0 +1,55 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/title_debug"
+                android:textColor="@android:color/white"
+                android:textSize="23sp" />
+
+            <ImageView
+                android:id="@+id/add"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="right"
+                android:background="@drawable/general_selector"
+                android:clickable="true"
+                android:padding="12dp"
+                android:src="@mipmap/add" />
+        </FrameLayout>
+
+        <ListView
+            android:id="@+id/debug_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#11000000"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"  
+            android:scrollbars="none" >
+        </ListView>
+    </LinearLayout>
+
+    <com.k1.graphcode.ui.views.Dialog
+        android:id="@+id/dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

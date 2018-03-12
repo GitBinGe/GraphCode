@@ -1,0 +1,175 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_setting"
+            android:textColor="@android:color/white"
+            android:textSize="23sp" />
+
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="right"
+            android:background="@drawable/general_selector"
+            android:clickable="true"
+            android:padding="12dp"
+            android:src="@mipmap/save" />
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/devices_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#11000000"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/wifi"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="SSID : "
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/ssid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|right"
+                    android:minWidth="200dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#44ffffff" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#11000000"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ip"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="CONTROLLER IP : "
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/ip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:digits="0123456789."
+                    android:gravity="center|right"
+                    android:inputType="numberDecimal"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#44ffffff" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#11000000"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Refresh rate : "
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/refresh_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:digits="0123456789"
+                    android:gravity="center|right"
+                    android:inputType="number"
+                    android:text="1000"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#44ffffff" />
+
+            <RelativeLayout
+                android:id="@+id/debug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/general_selector"
+                android:visibility="gone"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#11000000"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:padding="15dp"
+                    android:text="Debug List"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

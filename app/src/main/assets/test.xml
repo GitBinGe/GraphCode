@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<program>
+
+    <header>
+
+        <applicationName>
+abc
+        </applicationName>
+
+        <applicationVersion>
+1.0
+        </applicationVersion>
+
+        <programName>
+abc
+        </programName>
+    </header>
+
+    <objectList>
+
+        <object name="ee" >
+
+            <scriptList>
+
+                <script type="StartScript" >
+
+                    <brickList>
+
+                        <brick type="RepeatBrick" >
+
+                            <formulaList>
+
+                                <formula category="TIMES_TO_REPEAT" >
+
+                                    <leftChild>
+
+                                        <type>
+NUMBER
+                                        </type>
+
+                                        <value>
+3
+                                        </value>
+                                    </leftChild>
+
+                                    <rightChild>
+
+                                        <type>
+NUMBER
+                                        </type>
+
+                                        <value>
+3
+                                        </value>
+                                    </rightChild>
+
+                                    <type>
+OPERATOR
+                                    </type>
+
+                                    <value>
+PLUS
+                                    </value>
+                                </formula>
+                            </formulaList>
+                        </brick>
+
+                        <brick type="LoopEndBrick" />
+                    </brickList>
+                </script>
+            </scriptList>
+        </object>
+    </objectList>
+
+</program>
